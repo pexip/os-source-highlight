@@ -1,0 +1,16 @@
+Description: Fix national encoding to utf8
+ Upstream credits contains ISO-8859-1 charecters which
+ needs to be converted to UTF-8 for compatibility.
+Author: Kartik Kulkarni <kartik.koolks@gmail.com>
+
+--- a/CREDITS
++++ b/CREDITS
+@@ -61,7 +61,7 @@
+      helped in generating xhtml code.
+    * Konstantine Serebriany helped in creating the ESC
+      output format and using source-highlight with less
+-   * Marc Côté wrote the scanenr for Lua
++   * Marc CÃ´tÃ© wrote the scanenr for Lua
+    * Noritsugu Nakamura wrote the scanner for
+      Ruby
+    * Stuart Rackham wrote the DocBook output

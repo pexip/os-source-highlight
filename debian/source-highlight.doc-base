@@ -1,0 +1,10 @@
+Document: source-highlight
+Title: GNU Source-highlight
+Author: Lorenzo Bettini
+Abstract: The documentation for source-highlight, a syntax highlighting tool.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/source-highlight/index.html
+Files: /usr/share/doc/source-highlight/*.html
+

@@ -1,0 +1,15 @@
+source-highlight for Debian
+---------------------------
+
+The deprecated programs cpp2html and java2html are not included in the
+Debian package.
+
+The script src-hilite-lesspipe.sh is not installed in /usr/bin/ but in
+/usr/share/source-highlight/.  You can use it to beautify the output
+of the less command when viewing files that source-highlight can
+highlight.  To do so, set the following environment variables:
+
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
+ -- Peter Eisentraut <petere@debian.org>, Sat, 12 Sep 2009 12:42:05 +0300

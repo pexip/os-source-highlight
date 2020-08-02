@@ -1,0 +1,80 @@
+Source: source-highlight
+Section: devel
+Priority: optional
+Maintainer: Kartik Kulkarni <kartik.koolks@gmail.com>
+Build-Depends:
+ automake,
+ debhelper-compat (= 12),
+ exuberant-ctags,
+ gawk,
+ help2man,
+ libboost-regex-dev,
+ texinfo,
+Standards-Version: 4.5.0
+Homepage: http://www.gnu.org/software/src-highlite/
+Vcs-Git: https://salsa.debian.org/debian/source-highlight.git
+Vcs-Browser: https://salsa.debian.org/debian/source-highlight
+
+Package: source-highlight
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: convert source code to syntax highlighted document
+ This program, given a source file, produces a document with syntax
+ highlighting.
+ .
+ It supports syntax highlighting for over 100 file formats, including
+ major programming languages, markup formats, and configuration file
+ formats.  For output, the following formats are supported: HTML,
+ XHTML, LaTeX, Texinfo, ANSI color escape sequences, and DocBook.
+
+Package: libsource-highlight-dev
+Section: libdevel
+Architecture: any
+Depends:
+ libboost-regex-dev,
+ libsource-highlight4v5 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Replaces:
+ source-highlight (<< 3.1.4-1),
+Description: development files for source highlighting library
+ These are the development files for the library that underlies the
+ source-highlight program suite.  It converts source code to a
+ document with syntax highlighting and supports many file formats.
+ The library can be used by other C++ programs to get source code
+ highlighting capabilities.
+
+Package: libsource-highlight4v5
+Section: libs
+Architecture: any
+Depends:
+ libsource-highlight-common,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Conflicts:
+ libsource-highlight4,
+Replaces:
+ libsource-highlight4,
+Description: source highlighting library
+ This is the library that underlies the source-highlight program
+ suite.  It converts source code to a document with syntax
+ highlighting and supports many file formats.  The library can be used
+ by other C++ programs to get source code highlighting capabilities.
+
+Package: libsource-highlight-common
+Section: libs
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Replaces:
+ source-highlight (<< 3.1.4-1),
+Description: architecture-independent files for source highlighting library
+ This package contains the data files used by the libsource-highlight
+ library, which is the library that underlies the source-highlight
+ program suite.  The library converts source code to a document with
+ syntax highlighting and supports many file formats.  The library can
+ be used by other C++ programs to get source code highlighting
+ capabilities.

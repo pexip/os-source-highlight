@@ -1,0 +1,6 @@
+# False positive; the patch fixes the issue.
+source-highlight source: license-problem-gfdl-invariants doc/source-highlight-lib.html
+source-highlight source: license-problem-gfdl-invariants doc/source-highlight-lib.info
+source-highlight source: license-problem-gfdl-invariants doc/source-highlight.html
+source-highlight source: license-problem-gfdl-invariants doc/source-highlight.info
+source-highlight source: license-problem-gfdl-invariants debian/patches/695793_GFDL_doc.patch

@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_configure:
+	CONFIG_SHELL=/bin/sh dh_auto_configure -- \
+	--with-bash-completion=/usr/share/bash-completion/completions \
+	--with-boost-regex=boost_regex
+
+DESTDIR=$(CURDIR)/debian/tmp
+
+override_dh_install:
+	rm $(DESTDIR)/usr/share/doc/source-highlight/INSTALL*
+	rm $(DESTDIR)/usr/share/doc/source-highlight/COPYING*
+	rm $(DESTDIR)/usr/bin/cpp2html
+	rm $(DESTDIR)/usr/bin/java2html
+	mv $(DESTDIR)/usr/bin/src-hilite-lesspipe.sh $(DESTDIR)/usr/share/source-highlight/
+	mv $(DESTDIR)/usr/bin/source-highlight-esc.sh $(DESTDIR)/usr/share/source-highlight/
+	dh_install
+	rm $(DESTDIR)/usr/lib/$(DEB_TARGET_MULTIARCH)/libsource-highlight.la
+
+override_dh_auto_test:
+	dh_auto_test --no-parallel

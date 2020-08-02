@@ -1,0 +1,286 @@
+source-highlight (3.1.9-3) unstable; urgency=medium
+
+  * Added VCS and will be maintained at salsa
+  * Updated strict automake dependency
+  * Removed a few unnecessary dependencies.
+
+ -- Kartik Kulkarni <kartik.koolks@gmail.com>  Mon, 03 Aug 2020 01:31:04 +0530
+
+source-highlight (3.1.9-2) unstable; urgency=medium
+
+  * Fix reproducible build with patch from 
+    Vagrant (Closes: #963518)
+  * Fix fail to cross build from source with patch
+    from Helmut  (Closes: #912715)
+  * Updated standards version
+
+ -- Kartik Kulkarni <kartik.koolks@gmail.com>  Wed, 29 Jul 2020 01:56:28 +0530
+
+source-highlight (3.1.9-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Disable parallelization when running 'dh_auto_test'.
+    This is necessary due to racy conditions in the way the testsuite
+    is run. (See #950177)
+
+ -- Sergio Durigan Junior <sergiodj@debian.org>  Mon, 09 Mar 2020 17:07:08 -0400
+
+source-highlight (3.1.9-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix builds on non intel architectures. (Closes: #950176)
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Mon, 02 Mar 2020 11:16:32 +0100
+
+source-highlight (3.1.9-1) unstable; urgency=medium
+  
+  * New maintainer (closes: #948230)
+  * New upstream release
+  * Updated standards version
+  * Updated to Debhelper 12
+
+ -- Kartik Kulkarni <kartik.koolks@gmail.com>  Fri, 17 Jan 2020 22:28:28 +0530
+
+source-highlight (3.1.8-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * libsource-highlight-dev: Fix the dependency from
+    libboost-dev to libboost-regex-dev. (Closes: #877645)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 24 Feb 2018 20:36:52 +0200
+
+source-highlight (3.1.8-1.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Rename library packages for g++5 transition (Closes: #797234)
+
+ -- Ben Burton <bab@debian.org>  Sat, 31 Oct 2015 08:22:42 +1000
+
+source-highlight (3.1.8-1) unstable; urgency=low
+
+  * New upstream release
+    - Obsoletes 695793_GFDL_doc.patch
+    - Obsoletes 0001-New-texinfo-doesn-t-seem-to-allow-nested-examples-sm.patch
+    - Obsoletes fix-testcase-boost1.54.patch
+  * Remove build dependency on texi2html, which isn't actually used
+  * Updated standards version
+  * Updated bash completion installation directory
+
+ -- Peter Eisentraut <petere@debian.org>  Tue, 14 Jul 2015 20:12:26 +0000
+
+source-highlight (3.1.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated standards version
+
+ -- Peter Eisentraut <petere@debian.org>  Tue, 11 Mar 2014 21:16:17 -0400
+
+source-highlight (3.1.6-2) unstable; urgency=low
+
+  * Use dh_autotools-dev_updateconfig to update config.guess and
+    config.sub.  This was previously done with cp -f, but they were copied
+    to the wrong directory, so this had no effect.  (closes: #727507)
+  * Update standards version
+
+ -- Peter Eisentraut <petere@debian.org>  Tue, 05 Nov 2013 20:55:21 -0500
+
+source-highlight (3.1.6-1.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Use even more "wrong" regex in lib/tests_test_regexranges_main.cpp,
+    since "{notclosed" is actually a valid perl regular expression
+    (unmatched {}, is silently treated as literal string) (Closes:
+    #724089)
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Tue, 22 Oct 2013 14:03:58 +0100
+
+source-highlight (3.1.6-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Drop '-mt' suffix from boost libraries. (closes: #709578)
+  * Apply a patch to fix docs from FTBFS with new texinfo (submitted upstream)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 10 Jul 2013 23:12:10 +0100
+
+source-highlight (3.1.6-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Changing the documentation license to GFDL without cover texts, thanks to
+    Lorenzo Bettini, upstream author, for his quick action (closes: #695793)
+
+ -- David Prévot <taffit@debian.org>  Mon, 31 Dec 2012 18:02:54 -0400
+
+source-highlight (3.1.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Use hardening build flags obtained from dpkg
+
+ -- Peter Eisentraut <petere@debian.org>  Mon, 09 Jan 2012 20:48:18 +0200
+
+source-highlight (3.1.5-1) unstable; urgency=low
+
+  * New upstream release
+    - Raised library soname, packages renamed
+    - Obsoletes patch for bug #579698
+  * Fixed lintian warning brace-expansion-in-debhelper-config-file
+  * Removed *.la file from -dev package
+  * Added build-arch and build-indep targets to debian/rules
+  * Updated standards version
+
+ -- Peter Eisentraut <petere@debian.org>  Tue, 08 Nov 2011 20:37:22 +0200
+
+source-highlight (3.1.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Split package into executable and library packages (closes: #578738)
+
+ -- Peter Eisentraut <petere@debian.org>  Mon, 21 Jun 2010 15:12:37 -0400
+
+source-highlight (3.1.3-2) unstable; urgency=low
+
+  * Fixed FTBFS due to boost version change (closes: #579698)
+  * Updated standards version
+
+ -- Peter Eisentraut <petere@debian.org>  Mon, 17 May 2010 20:20:03 +0300
+
+source-highlight (3.1.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Added call to aclocal to debian/rules, to evade problems due to automake
+    version mismatches
+
+ -- Peter Eisentraut <petere@debian.org>  Mon, 25 Jan 2010 00:59:56 +0200
+
+source-highlight (3.1.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Source format changed to 3.0 (quilt)
+  * Added depends on dpkg (>= 1.15.4) | install-info for info system
+    transition
+  * Addes some dh(1) magic to debian/rules
+
+ -- Peter Eisentraut <petere@debian.org>  Fri, 01 Jan 2010 18:36:42 +0200
+
+source-highlight (3.1.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Peter Eisentraut <petere@debian.org>  Wed, 21 Oct 2009 23:30:49 +0300
+
+source-highlight (3.1-2) unstable; urgency=low
+
+  * Really remove /usr/share/info/dir, even if uncompressed (closes: #547976)
+
+ -- Peter Eisentraut <petere@debian.org>  Wed, 23 Sep 2009 23:17:18 +0300
+
+source-highlight (3.1-1) unstable; urgency=low
+
+  * New upstream release (closes: #423003)
+    - Adds info-dir-section to info files (closes: #528904)
+    - Improves PHP support (closes: #441228)
+  * Updated standards version
+  * Updated copyright file
+  * Run test suite as part of build
+  * Corrected README.Debian
+
+ -- Peter Eisentraut <petere@debian.org>  Mon, 21 Sep 2009 21:53:25 +0300
+
+source-highlight (2.4-6) unstable; urgency=low
+
+  * New maintainer (closes: #536764)
+  * Added watch file
+  * Added Homepage control field
+  * Updated rules to Debhelper 7
+  * Updated standards version
+  * Point copyright to versioned license file GPL-2
+  * Added doc-base integration
+
+ -- Peter Eisentraut <petere@debian.org>  Fri, 28 Aug 2009 00:44:42 +0300
+
+source-highlight (2.4-5.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTBFS with new boost by switching to the “-mt” variant for the
+    --with-boost-regex ./configure parameter in debian/rules, thanks to
+    Jan Dittberner (Closes: #530480, #533920).
+  * Set urgency to “medium” since this bug affects testing too.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 18 Jul 2009 13:28:17 +0200
+
+source-highlight (2.4-5.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTBFS with GCC 4.3 (Closes: #417698).
+
+ -- Luk Claes <luk@debian.org>  Sat, 15 Mar 2008 16:06:22 +0000
+
+source-highlight (2.4-5.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS with new boost libraries (Closes: #425931)
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Mon, 11 Jun 2007 18:35:02 -0400
+
+source-highlight (2.4-5) unstable; urgency=low
+
+  * Corrected minor description issue, closes: #396978.
+
+ -- Ola Lundqvist <opal@debian.org>  Sun,  5 Nov 2006 18:15:03 +0100
+
+source-highlight (2.4-4) unstable; urgency=low
+
+  * Updated README.Debian file to reflect the new version.
+    Thanks to Thomas Petazzoni <thomas.petazzoni@enix.org> for how to use
+    lesspipe.
+  * Moved src-hilite-lesspipe.sh to /usr/share/source-highlight, as suggested
+    by Thomas Petazzoni.
+  * Updated description of package in control file, with ideas taken from
+    Thomas Petazzoni.
+
+ -- Ola Lundqvist <opal@debian.org>  Tue, 22 Aug 2006 20:56:37 +0200
+
+source-highlight (2.4-3) unstable; urgency=low
+
+  * Added build dependency on Boost::regex.
+
+ -- Ola Lundqvist <opal@debian.org>  Tue, 22 Aug 2006 11:28:01 +0200
+
+source-highlight (2.4-2) unstable; urgency=low
+
+  * Added gawk to build-depends and made sure that the clean target is
+    actually executed, closes: #383970.
+  * Cleaned up the build process some more.
+
+ -- Ola Lundqvist <opal@debian.org>  Mon, 21 Aug 2006 21:30:00 +0200
+
+source-highlight (2.4-1) unstable; urgency=low
+
+  * New upstream release, closes: #345090.
+  * Added build-depends on libboost-regex-dev, texinfo, help2man and texi2man.
+  * Updated to standards version 3.7.2.
+  * Removed two lines from install target in debian/rules. Not needed
+    anymore.
+  * Moved to debhelper 4 compatibility.
+
+ -- Ola Lundqvist <opal@debian.org>  Sun, 20 Aug 2006 20:55:50 +0200
+
+source-highlight (1.11-2) unstable; urgency=low
+
+  * New upstream release.
+  * Package upload needed because of gcc-4.0 transition, closes: #333257.
+  * Updated to new FSF address in debian/copyright.
+
+ -- Ola Lundqvist <opal@debian.org>  Sat,  5 Nov 2005 20:59:35 +0100
+
+source-highlight (1.11-1) unstable; urgency=low
+
+  * New upstream release, closes: #245902.
+  * Updated standards version.
+
+ -- Ola Lundqvist <opal@debian.org>  Tue,  8 Mar 2005 21:08:47 +0100
+
+source-highlight (1.6.3-1) unstable; urgency=low
+
+  * Initial release, closes: #179330.
+
+ -- Ola Lundqvist <opal@debian.org>  Sat, 15 Feb 2003 17:45:47 +0100
