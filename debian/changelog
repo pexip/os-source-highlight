@@ -1,3 +1,9 @@
+source-highlight (3.1.9-3pexip2) pexip-bullseye; urgency=medium
+
+  * Bullseye rebuild for ARM64 inclusion
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Mon, 05 Sep 2022 10:36:00 +0100
+
 source-highlight (3.1.9-3pexip1) pexip-bullseye; urgency=medium
 
   * Prepare Pexip packaging
