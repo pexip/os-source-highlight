@@ -15,7 +15,7 @@ Standards-Version: 4.5.0
 Homepage: http://www.gnu.org/software/src-highlite/
 Vcs-Git: https://salsa.debian.org/debian/source-highlight.git
 Vcs-Browser: https://salsa.debian.org/debian/source-highlight
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: source-highlight
 Architecture: any
