@@ -1,1 +1,3 @@
 fix-national-encoding.patch
+gcc11.patch
+gcc12.patch
