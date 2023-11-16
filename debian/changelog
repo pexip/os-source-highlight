@@ -1,3 +1,9 @@
+source-highlight (3.1.9-4.2pexip1) pexip-bookworm; urgency=medium
+
+  * Initial bookworm build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 10:33:50 +0000
+
 source-highlight (3.1.9-4.2) unstable; urgency=medium
 
   * Non-maintainer upload.
