@@ -2,7 +2,7 @@ Source: source-highlight
 Section: devel
 Priority: optional
 Maintainer: Kartik Kulkarni <kartik.koolks@gmail.com>
-Build-Depends:
+Build-Depends: dpkg-dev (>= 1.22.5),
  automake,
  debhelper-compat (= 12),
  exuberant-ctags,
@@ -34,7 +34,7 @@ Section: libdevel
 Architecture: any
 Depends:
  libboost-regex-dev,
- libsource-highlight4v5 (= ${binary:Version}),
+ libsource-highlight4t64 (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
 Replaces:
@@ -46,7 +46,10 @@ Description: development files for source highlighting library
  The library can be used by other C++ programs to get source code
  highlighting capabilities.
 
-Package: libsource-highlight4v5
+Package: libsource-highlight4t64
+Provides: ${t64:Provides}
+X-Time64-Compat: libsource-highlight4v5
+Breaks: libsource-highlight4v5 (<< ${source:Version})
 Section: libs
 Architecture: any
 Multi-Arch: same
@@ -56,7 +59,7 @@ Depends:
  ${shlibs:Depends},
 Conflicts:
  libsource-highlight4,
-Replaces:
+Replaces:libsource-highlight4v5, 
  libsource-highlight4,
 Description: source highlighting library
  This is the library that underlies the source-highlight program
