@@ -1,3 +1,9 @@
+source-highlight (3.1.9-4.2+pexip25u1) pexip-trixie; urgency=medium
+
+  * Rebuild for trixie distribution.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Wed, 04 Feb 2026 10:31:15 +0000
+
 source-highlight (3.1.9-4.2+pexip24u3) pexip-bookworm; urgency=medium
 
   * New versioning scheme
